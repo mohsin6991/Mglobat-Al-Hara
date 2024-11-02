@@ -1,4 +1,7 @@
 import OurMenu from "./ourMenu/page";
+import OurBranches from "./ourBranches/page";
+import Feekback from "./feedBack/page";
+import OurOffers from "./OurOffers/page";
 export default function Home() {  
   return (  
     <div className="relative min-h-screen bg-gray-100 custom-bg text-white ">  
@@ -19,6 +22,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-black opacity-50"></div> 
       </div>  
       <OurMenu />
+      <OurBranches />
+      <Feekback />
+      <OurOffers />
+      
     </div>  
   );  
 }

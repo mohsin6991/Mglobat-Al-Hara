@@ -25,6 +25,8 @@ export default function RootLayout({
       <head>  
         <title>{metadata.title}</title>  
         <meta name="description" content={metadata.description} />  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
       </head>  
       <body className="flex flex-col min-h-screen">  
         <header className="bg-white text-black  h-[70px] px-[30px] gap-[20px] opacity-100 flex justify-between items-center">  
@@ -65,10 +67,48 @@ export default function RootLayout({
         </header>  
 
         <main className="flex-grow">{children}</main>  
+        <footer className="w-full h-[234px] bg-[#2C2C28] text-white p-4 opacity-90 flex flex-col items-center">
+    <div className="w-full flex items-center justify-between">
+        {/* Logo on the left */}
+        <img src="/images/footer/f1.png" alt="Footer Logo" className="h-16 mr-4" />
 
-        <footer className="bg-gray-800 text-white text-center p-4">  
-          <p>&copy; {new Date().getFullYear()} Restaurant Name. All rights reserved.</p>  
-        </footer>  
+        {/* Contact information in the center */}
+        <div className="text-center">
+            <p>Call Us:<br /> <span className="font-semibold">0500042752</span></p>
+            <p>Email Us:<br /> <span className="font-semibold">info@mglobtalharah.com</span></p>
+        </div>
+
+        {/* Social media icons on the right */}
+        <div className="flex space-x-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin-in text-xl"></i>
+            </a>
+        </div>
+    </div>
+
+    {/* Horizontal line and copyright text at the bottom */}
+    <hr className="border-t border-white w-full my-4" />
+    <p className="text-center">&copy; Mglobt Al Hara {new Date().getFullYear()}. All rights reserved.</p>
+</footer>
+
+
+
+
+
+
+
+
+
+       
       </body>  
     </html>  
   );  

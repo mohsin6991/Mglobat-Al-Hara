@@ -12,7 +12,7 @@ type MenuItemProps = {
 };
 
 const OurMenu: FC = () => {
-    const [visibleSection, setVisibleSection] = useState<string>('all');
+    const [visibleSection, setVisibleSection] = useState<string>('Main Course');
     const [menuItems, setMenuItems] = useState<MenuItemProps[]>([]);
     const categories = ['all', 'Main Course', 'Salads', 'Sauces', 'Side Orders', 'Desserts', 'Drinks'];
 
